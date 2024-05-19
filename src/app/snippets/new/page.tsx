@@ -1,3 +1,5 @@
 export default function SnippetCreatePage(){
-  return <h1>Snippet create page</h1>
+  return <form>
+    <h3 className="font-bold m-3">Create a snippet</h3>
+  </form>
 }
