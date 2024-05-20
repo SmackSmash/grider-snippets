@@ -15,6 +15,12 @@ export default function SnippetCreatePage() {
           </label>
           <textarea className='w-full rounded border p-2' name='code' />
         </div>
+        <button
+          className='rounded bg-poimandres-darkblue p-2 font-bold uppercase text-poimandres-darkslate hover:text-poimandres-white'
+          type='submit'
+        >
+          Create
+        </button>
       </div>
     </form>
   );
