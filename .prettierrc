@@ -1,5 +1,4 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
   "printWidth": 100,
@@ -13,5 +12,6 @@
   "quoteProps": "as-needed",
   "useTabs": false,
   "bracketSameLine": false,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
