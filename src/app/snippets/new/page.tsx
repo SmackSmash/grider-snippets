@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import { db } from '@/db';
 
 export default function SnippetCreatePage() {
@@ -6,6 +7,7 @@ export default function SnippetCreatePage() {
     const title = formData.get('title') as string;
     const code = formData.get('code') as string;
     const snippet = await db.snippet.create({ data: { title, code } });
+    redirect('/');
   }
 
   return (
