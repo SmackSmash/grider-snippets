@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poetsen: ['"Poetsen One"', 'Arial', 'Helvetica', 'sans-serif']
+      },
       colors: {
         'poimandres-yellow': '#FFFAC2',
         'poimandres-lightgreen': '#5DE4C7',

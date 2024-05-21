@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-poimandres-blackslate text-poimandres-white;
+    @apply font-poetsen bg-poimandres-blackslate text-poimandres-white;
   }
 }
