@@ -16,7 +16,7 @@ export default async function Home() {
       {snippets.map(({ id, title, code }) => (
         <div className='my-4' key={id}>
           <h1 className='mb-2'>{title}</h1>
-          <div className='rounded bg-poimandres-blackslate p-4 shadow-md'>
+          <div className='overflow-x-auto rounded bg-poimandres-blackslate p-4 shadow-md'>
             {parse(
               highlighter.codeToHtml(code, {
                 lang: 'javascript',
