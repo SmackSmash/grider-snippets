@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className='text-3xl text-poimandres-darkpink'>Snippets</h1>
+      <h1 className='my-2 inline-block -rotate-6 text-4xl text-poimandres-yellow'>Snippets!</h1>
       {snippets.map(({ id, title, code }) => (
         <div className='my-4' key={id}>
           <h1 className='mb-2'>{title}</h1>
