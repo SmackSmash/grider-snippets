@@ -6,6 +6,6 @@
 
 @layer base {
   body {
-    @apply font-poetsen bg-poimandres-blackslate text-poimandres-white;
+    @apply font-poetsen bg-poimandres-darkslate text-poimandres-white;
   }
 }
