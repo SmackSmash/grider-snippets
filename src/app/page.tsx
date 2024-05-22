@@ -13,10 +13,9 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className='my-2 inline-block -rotate-6 text-4xl text-poimandres-yellow'>Snippets!</h1>
       {snippets.map(({ id, title, code }) => (
-        <div className='my-8' key={id}>
-          <div className='flex'>
+        <div className='mb-8' key={id}>
+          <div className='flex' key={id}>
             <h1 className='mb-2'>{title}</h1>
             <Link
               className='ml-auto rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
