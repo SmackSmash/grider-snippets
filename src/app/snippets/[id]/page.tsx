@@ -1,3 +1,5 @@
+import { db } from '@/db';
+
 interface ViewSnippetProps {
   params: {
     id: string;

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getHighlighter } from 'shiki';
 import parse from 'html-react-parser';
 import { db } from '@/db';
@@ -14,9 +15,17 @@ export default async function Home() {
     <div>
       <h1 className='my-2 inline-block -rotate-6 text-4xl text-poimandres-yellow'>Snippets!</h1>
       {snippets.map(({ id, title, code }) => (
-        <div className='my-4' key={id}>
-          <h1 className='mb-2'>{title}</h1>
-          <div className='overflow-x-auto rounded bg-poimandres-blackslate p-4 shadow-md'>
+        <div className='my-8' key={id}>
+          <div className='flex'>
+            <h1 className='mb-2'>{title}</h1>
+            <Link
+              className='ml-auto rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
+              href={`/snippets/${id}`}
+            >
+              🖊️ Edit
+            </Link>
+          </div>
+          <div className='overflow-x-auto rounded-b rounded-tl bg-poimandres-blackslate p-4 shadow-md'>
             {parse(
               highlighter.codeToHtml(code, {
                 lang: 'javascript',
