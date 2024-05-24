@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className='min-h-screen w-full'>
         <div className='container mx-auto flex h-screen w-full flex-col px-2'>
           <Link
-            className='mb-8 mt-2 inline-block -rotate-6 text-4xl text-poimandres-yellow'
+            className='mb-14 mt-2 inline-block -rotate-6 text-4xl text-poimandres-yellow'
             href='/'
           >
             Snippets!
