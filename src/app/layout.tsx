@@ -17,11 +17,14 @@ export default function RootLayout({
     <html lang='en'>
       <body className='min-h-screen w-full'>
         <div className='container mx-auto flex h-screen w-full flex-col px-2'>
-          <header className='mb-14 mt-2 flex'>
+          <header className='mb-14 mt-4 flex items-center'>
             <Link className='-rotate-6 text-4xl text-poimandres-yellow' href='/'>
               Snippets!
             </Link>
-            <Link className='bg-poimandres-lightgreen' href='/snippets/new'>
+            <Link
+              className='ml-auto rounded bg-poimandres-lightgreen px-4 py-2 text-poimandres-blackslate'
+              href='/snippets/new'
+            >
               New
             </Link>
           </header>
