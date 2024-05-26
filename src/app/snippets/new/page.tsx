@@ -11,7 +11,7 @@ export default function SnippetCreatePage() {
   }
 
   return (
-    <form className='font-sans' action={createSnippet}>
+    <form action={createSnippet}>
       <div className='flex flex-col gap-4 p-3'>
         <label htmlFor='title'>Title</label>
         <input
@@ -25,7 +25,7 @@ export default function SnippetCreatePage() {
           name='code'
         />
         <button
-          className='rounded bg-poimandres-lightgreen p-2 font-poetsen font-bold text-poimandres-darkslate'
+          className='rounded bg-poimandres-lightgreen p-2 font-bold text-poimandres-darkslate'
           type='submit'
         >
           Add Snippet
