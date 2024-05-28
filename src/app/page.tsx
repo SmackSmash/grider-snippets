@@ -19,6 +19,12 @@ export default async function Home() {
             <h1 className='mb-2'>{title}</h1>
             <Link
               className='ml-auto rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
+              href={`/snippets/${id}/edit`}
+            >
+              🖊️ Edit
+            </Link>
+            <Link
+              className='ml-2 rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
               href={`/snippets/${id}`}
             >
               👁️ View
