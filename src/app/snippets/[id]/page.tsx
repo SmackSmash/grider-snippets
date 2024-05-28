@@ -10,13 +10,6 @@ interface ViewSnippetProps {
 }
 
 export default async function ViewSnippet({ params: { id } }: ViewSnippetProps) {
-  // DELAY FUNCTION - REMOVE FOR PROD!!!
-  await new Promise(res => {
-    setTimeout(() => {
-      res('Resolved!');
-    }, 1000);
-  });
-
   const snippet = await db.snippet.findFirst({ where: { id: Number(id) } });
 
   if (!snippet) {
