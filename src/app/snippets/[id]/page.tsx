@@ -3,13 +3,13 @@ import { getHighlighter } from 'shiki';
 import parse from 'html-react-parser';
 import { db } from '@/db';
 
-interface ViewSnippetProps {
+interface ViewSnippetPageProps {
   params: {
     id: string;
   };
 }
 
-export default async function ViewSnippet({ params: { id } }: ViewSnippetProps) {
+export default async function ViewSnippetPage({ params: { id } }: ViewSnippetPageProps) {
   const snippet = await db.snippet.findFirst({ where: { id: Number(id) } });
 
   if (!snippet) {

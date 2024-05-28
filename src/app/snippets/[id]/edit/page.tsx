@@ -1,10 +1,10 @@
-interface EditSnipppetProps {
+interface EditSnipppetPageProps {
   params: {
     id: string;
   };
 }
 
-export default function EditSnippet(props: EditSnipppetProps) {
+export default function EditSnippetPage(props: EditSnipppetPageProps) {
   console.log(props);
   return <div>Edit snippet page</div>;
 }
