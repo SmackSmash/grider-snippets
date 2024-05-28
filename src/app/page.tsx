@@ -21,7 +21,7 @@ export default async function Home() {
               className='ml-auto rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
               href={`/snippets/${id}`}
             >
-              🖊️ Edit
+              👁️ View
             </Link>
           </div>
           <div className='overflow-x-auto rounded-b rounded-tl bg-poimandres-blackslate p-4 shadow-md'>
