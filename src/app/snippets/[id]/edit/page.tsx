@@ -4,7 +4,6 @@ interface EditSnipppetPageProps {
   };
 }
 
-export default function EditSnippetPage(props: EditSnipppetPageProps) {
-  console.log(props);
-  return <div>Edit snippet page</div>;
+export default function EditSnippetPage({ params: { id } }: EditSnipppetPageProps) {
+  return <div>Edit snippet page for {id}</div>;
 }
