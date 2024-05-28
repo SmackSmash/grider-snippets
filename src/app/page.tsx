@@ -24,7 +24,7 @@ export default async function Home() {
               🖊️ Edit
             </Link>
             <Link
-              className='ml-2 rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
+              className='ml-[3px] rounded-t-md bg-poimandres-blackslate px-4 pt-1 text-poimandres-lightgreen hover:underline'
               href={`/snippets/${id}`}
             >
               👁️ View
