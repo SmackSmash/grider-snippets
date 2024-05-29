@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Snippet } from '@prisma/client';
 import Editor from '@monaco-editor/react';
-import { updateSnippet } from '@/app/actions';
+import { updateSnippet } from '@/actions';
 
 interface EditSnippetFormProps {
   snippet: Snippet;
