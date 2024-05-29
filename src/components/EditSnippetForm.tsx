@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Snippet } from '@prisma/client';
 import Editor from '@monaco-editor/react';
+import { updateSnippet } from '@/app/actions';
 
 interface EditSnippetFormProps {
   snippet: Snippet;
@@ -15,7 +16,7 @@ const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps)
   };
 
   const handleUpdateSnippet = () => {
-    alert(editorValue);
+    updateSnippet(id, editorValue);
   };
 
   return (
