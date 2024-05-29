@@ -1,14 +1,21 @@
 'use client';
+import { useState } from 'react';
 import { Snippet } from '@prisma/client';
-import Editor, { type OnChange } from '@monaco-editor/react';
+import Editor from '@monaco-editor/react';
 
 interface EditSnippetFormProps {
   snippet: Snippet;
 }
 
 const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps) => {
+  const [editorValue, setEditorValue] = useState<string | undefined>(code);
+
   const handleEditorChange = (value: string | undefined) => {
-    alert(value);
+    setEditorValue(value);
+  };
+
+  const handleUpdateSnippet = () => {
+    alert(editorValue);
   };
 
   return (
@@ -21,6 +28,12 @@ const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps)
         defaultValue={code}
         onChange={handleEditorChange}
       />
+      <button
+        className='mt-2 rounded bg-poimandres-lightgreen px-4 py-2 text-poimandres-blackslate'
+        onClick={handleUpdateSnippet}
+      >
+        Update snippet
+      </button>
     </div>
   );
 };
