@@ -1,11 +1,8 @@
 'use client';
+import { Snippet } from '@prisma/client';
 
 interface EditSnippetFormProps {
-  snippet: {
-    id: number;
-    title: string;
-    code: string;
-  };
+  snippet: Snippet;
 }
 
 const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps) => {
