@@ -15,9 +15,10 @@ const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps)
     setEditorValue(value);
   };
 
-  const handleUpdateSnippet = () => {
-    updateSnippet(id, editorValue);
-  };
+  // Funky way of calling server functions, works with JS disabled and
+  // appears to be the standard. Bind arguments to function and pass
+  // bound version of function to a form action.
+  const updateSnippetAction = updateSnippet.bind(null, id, editorValue);
 
   return (
     <div>
@@ -30,12 +31,14 @@ const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps)
         defaultValue={code}
         onChange={handleEditorChange}
       />
-      <button
-        className='mt-2 rounded bg-poimandres-lightgreen px-4 py-2 text-poimandres-blackslate'
-        onClick={handleUpdateSnippet}
-      >
-        Update snippet
-      </button>
+      <form action={updateSnippetAction}>
+        <button
+          className='mt-2 rounded bg-poimandres-lightgreen px-4 py-2 text-poimandres-blackslate'
+          type='submit'
+        >
+          Update snippet
+        </button>
+      </form>
     </div>
   );
 };
