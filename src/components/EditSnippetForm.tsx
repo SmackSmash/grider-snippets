@@ -25,6 +25,7 @@ const EditSnippetForm = ({ snippet: { id, title, code } }: EditSnippetFormProps)
         height='400px'
         defaultLanguage='javascript'
         theme='vs-dark'
+        options={{ minimap: { enabled: false } }}
         defaultValue={code}
         onChange={handleEditorChange}
       />
