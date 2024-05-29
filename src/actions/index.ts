@@ -1,5 +1,7 @@
 'use server';
+import { db } from '@/db';
 
 export async function updateSnippet(id: number, code: string | undefined) {
-  console.log(id, code);
+  const snippet = await db.snippet.findFirst({ where: { id } });
+  console.log(snippet);
 }
